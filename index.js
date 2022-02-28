@@ -1,0 +1,41 @@
+const moment = require('moment');
+
+let fullDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+let day = moment().format('dddd');
+let date = moment().format("MMM Do YY");
+let addSevenDays = moment().add(7, 'days').calendar();
+let addSevenMonths = moment().add(7, 'months').calendar();
+let addSevenYears = moment().add(7, 'years').calendar();
+let subtractSevenDays = moment().subtract(7, 'days').calendar();
+let subtractSevenMonths = moment().subtract(7, 'months').calendar();
+let subtractSevenYears = moment().subtract(7, 'years').calendar();
+let checkA = moment("2020-01-01");
+let checkB = moment("2020-14-01");
+let a = moment([2014-11-11]);
+let b = moment([2015-09-11]);
+let checkLeapYearA = moment([2019]).isLeapYear();
+let checkLeapYearB = moment([2020]).isLeapYear();
+
+let box = document.querySelector(".box");
+let h2 = document.createElement("h2");
+h2.innerText = "Current Date and Time";
+let currDate = document.createElement("p");
+currDate.innerText = fullDate;
+box.append(h2, currDate);
+
+// console.log(fullDate);
+console.log(day);
+console.log(date);
+console.log(addSevenDays);
+console.log(addSevenMonths);
+console.log(addSevenYears);
+console.log(subtractSevenDays);
+console.log(subtractSevenMonths);
+console.log(subtractSevenYears);
+console.log(checkA.isValid());
+console.log(checkB.isValid());
+console.log(a.diff(b, 'months'));
+console.log(a.diff(b, 'years'));
+console.log(a.diff(b, 'days'));
+console.log(checkLeapYearA);
+console.log(checkLeapYearB);
